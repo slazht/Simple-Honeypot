@@ -10,7 +10,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print(f"Connected by {addr}")
-        flag = '220 (vsFTPd 3.0.3)\n'
+        flag = '220 (vsFTPd 2.3.4)\n'
         conn.sendall(flag.encode("utf-8"))
         while True:
             data = conn.recv(1024)
